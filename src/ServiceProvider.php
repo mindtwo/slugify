@@ -11,8 +11,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(SluggerInterface::class, function($app) {
-            return (new WordPressSlugger())->set_locale($app->getLocale());
-        });
+        $this->app->singleton(SluggerInterface::class, WordPressSlugger::class);
     }
 }
