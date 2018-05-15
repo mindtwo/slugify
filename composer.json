@@ -1,0 +1,40 @@
+{
+    "name": "mindtwo/slugify",
+    "description": "Create WordPress like slugs in laravel or any other php application.",
+    "keywords": ["laravel", "slugs", "slug", "wordpress"],
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "mindtwo GmbH",
+            "email": "info@mindtwo.de",
+            "homepage": "https://www.mindtwo.de",
+            "role": "Webdesign & Development Agency"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mindtwo\\Slugify\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mindtwo\\Slugify\\ServiceProvider"
+            ],
+            "aliases": {
+                "Slugify": "mindtwo\\Slugify\\Facade"
+            }
+        }
+    }
+}
