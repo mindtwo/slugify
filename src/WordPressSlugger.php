@@ -169,7 +169,7 @@ class WordPressSlugger implements SluggerInterface {
         $title = str_replace( '@', ' at ', $title );
 
         $title = str_replace( '/', ' ', $title );
-        $title = str_replace( '&', ' and ', $title );
+        $title = str_replace( '&', '-', $title );
 
         $title = preg_replace('/&.+?;/', '', $title); // kill entities
         $title = str_replace('.', '-', $title);
